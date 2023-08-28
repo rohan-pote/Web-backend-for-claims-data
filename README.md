@@ -7,8 +7,8 @@ For project requirements please refer: https://github.com/rohan-pote/napo-challe
    1. customer_id
    2. start_time
    3. end_time
-2. The datetime format provided in the project is YYYYMMDDHHMMSS. The datetime in the dummy_claims_response.json file was not as per this format. 
-   1. For eg: 1685761200000 does not provide a valid datetime format equal to YYYYMMDDHHMMSS. Hence, the created_time in the json has been updated to work for this project.
+2. The datetime format provided in the project is YYYYMMDDHHMMSS. The datetime in the `dummy_claims_response.json` file was not as per this format. 
+   1. For eg: 1685761200000 does not provide a valid datetime format equal to `YYYYMMDDHHMMSS`. Hence, the `created_time` in the `json` has been updated to work for this project.
 3. The size of the project is small requiring only one endpoint. Therefore, the `/claims` endpoint is added in the `app.py` script. Ideally for a bigger project the best practice is to add each endpoint in its own python file. This can be done by utilizing the `APIRouter` available from `FastAPI` using import: `from fastapi import APIRouter`.    
 
 ## Local Environment Setup
@@ -35,12 +35,13 @@ Checkout the code and set up the service ready for development as follows:
 
     # Create a docker container using the built image and run it:  
     docker run --rm -it --name claim-api -p 8000:8000 claim-api-service
-    ![Screenshot 2023-08-29 at 00 47 02](https://github.com/rohan-pote/napo-challenge/assets/34726174/83c042c0-d4c6-4430-ae23-7db8a3bbc261)
+
+![Screenshot 2023-08-29 at 00 47 02](https://github.com/rohan-pote/napo-challenge/assets/34726174/83c042c0-d4c6-4430-ae23-7db8a3bbc261)
 
 ## Calling the customer claims endpoint:
       # When the app is running you can do the following curl request: 
       
-      `curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=20230604000000&end_time=20230730000000'`
+      curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=20230604000000&end_time=20230730000000'
       
       Query parameters: 
       customer_id = 1201
@@ -78,6 +79,7 @@ Checkout the code and set up the service ready for development as follows:
 
 
       # curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=20230704000000&end_time=20230605000000' 
+      
       Query parameters: 
       customer_id = 1201
       start_time = 20230704000000
@@ -98,6 +100,7 @@ Checkout the code and set up the service ready for development as follows:
 
 
       # curl --location 'http://localhost:8000/claims?customer_id=1203&start_time=20230604000000&end_time=20230605000000' 
+      
       Query parameters: 
       customer_id = 1203
       start_time = 20230604000000
@@ -117,6 +120,7 @@ Checkout the code and set up the service ready for development as follows:
 
 
       # curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=202306040000&end_time=20230605000000' 
+      
       Query parameters: 
       customer_id = 1201
       start_time  = 202306040000
