@@ -18,7 +18,6 @@ class TestClaimAPI:
         response = client.get("http://localhost:8000/claims",
                               params={"customer_id": customer_id, "start_time": start_time,
                                       "end_time": end_time})
-        print(response.json())
         json_response = response.json()
         assert json_response["error details"]["status_code"] == 400
         assert json_response["error details"]["detail"] == "start_time must be before end_time"
@@ -30,7 +29,6 @@ class TestClaimAPI:
         response = client.get("http://localhost:8000/claims",
                               params={"customer_id": customer_id, "start_time": start_time,
                                       "end_time": end_time})
-        print(response.json())
         json_response = response.json()
         assert json_response["error details"]["status_code"] == 404
         assert json_response["error details"]["detail"] == "customer_id not found"
