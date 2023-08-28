@@ -1,0 +1,149 @@
+[
+    {
+        "created_time": 1685761200000,
+        "claim_id": 3389,
+        "customer_id": 1201,
+        "policy_id": 5678,
+        "details": {
+            "claim_type": 2,
+            "claim_amount": 619.16
+        },
+        "result": {
+            "decision": 1,
+            "paid_amount": 544.16
+        }
+    },
+    {
+        "created_time": 1685862000000,
+        "claim_id": 3390,
+        "customer_id": 1201,
+        "policy_id": 9012,
+        "details": {
+            "claim_type": 2,
+            "claim_amount": 612.23
+        },
+        "result": {
+            "decision": 1,
+            "paid_amount": 592.23
+        }
+    },
+    {
+        "created_time": 1686639600000,
+        "claim_id": 3391,
+        "customer_id": 1201,
+        "policy_id": 9012,
+        "details": {
+            "claim_type": 0,
+            "claim_amount": 838.42
+        },
+        "result": {
+            "decision": 1,
+            "paid_amount": 818.42
+        }
+    },
+    {
+        "created_time": 1686794400000,
+        "claim_id": 3392,
+        "customer_id": 1201,
+        "policy_id": 1234,
+        "details": {
+            "claim_type": 0,
+            "claim_amount": 677.0
+        },
+        "result": {
+            "decision": 0
+        }
+    },
+    {
+        "created_time": 1686985200000,
+        "claim_id": 3393,
+        "customer_id": 1201,
+        "policy_id": 5678,
+        "details": {
+            "claim_type": 0,
+            "claim_amount": 771.6
+        },
+        "result": {
+            "decision": 0
+        }
+    },
+    {
+        "created_time": 1687676400000,
+        "claim_id": 3394,
+        "customer_id": 1201,
+        "policy_id": 1234,
+        "details": {
+            "claim_type": 1,
+            "claim_amount": 745.98
+        },
+        "result": {
+            "decision": 0
+        }
+    },
+    {
+        "created_time": 1687726800000,
+        "claim_id": 3395,
+        "customer_id": 1201,
+        "policy_id": 1234,
+        "details": {
+            "claim_type": 1,
+            "claim_amount": 622.17
+        },
+        "result": {
+            "decision": 1,
+            "paid_amount": 547.17
+        }
+    },
+    {
+        "created_time": 1686027600000,
+        "claim_id": 3396,
+        "customer_id": 1202,
+        "policy_id": 3456,
+        "details": {
+            "claim_type": 2,
+            "claim_amount": 870.63
+        },
+        "result": {
+            "decision": 0
+        }
+    },
+    {
+        "created_time": 1686049200000,
+        "claim_id": 3397,
+        "customer_id": 1202,
+        "policy_id": 7890,
+        "details": {
+            "claim_type": 0,
+            "claim_amount": 890.09
+        },
+        "result": {
+            "decision": 0
+        }
+    },
+    {
+        "created_time": 1686124800000,
+        "claim_id": 3398,
+        "customer_id": 1202,
+        "policy_id": 7890,
+        "details": {
+            "claim_type": 1,
+            "claim_amount": 705.68
+        },
+        "result": {
+            "decision": 0
+        }
+    },
+    {
+        "created_time": 1687968000000,
+        "claim_id": 3399,
+        "customer_id": 1202,
+        "policy_id": 3456,
+        "details": {
+            "claim_type": 2,
+            "claim_amount": 948.23
+        },
+        "result": {
+            "decision": 0
+        }
+    }
+]
