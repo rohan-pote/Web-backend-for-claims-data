@@ -4,9 +4,9 @@ For project requirements please refer: https://github.com/rohan-pote/napo-challe
 
 ## Assumptions and approach
 1. The endpoint requires all following parameters for getting the correct response. Error handling is added if any parameter is missing. 
-   1. customer_id
-   2. start_time
-   3. end_time
+   1. `customer_id`
+   2. `start_time` in format `YYYYMMDDHHMMSS`
+   3. `end_time` in format `YYYYMMDDHHMMSS`
 2. The datetime format provided in the project is `YYYYMMDDHHMMSS`. The datetime in the `dummy_claims_response.json` file was not as per this format. 
    1. For eg: 1685761200000 does not provide a valid datetime format equal to `YYYYMMDDHHMMSS`. Hence, the `created_time` in the `json` has been updated to work for this project.
 3. The size of the project is small requiring only one endpoint. Therefore, the `/claims` endpoint is added in the `app.py` script. Ideally for a bigger project the best practice is to add each endpoint in its own python file. The operations for each endpoint can be controlled by utilizing the `APIRouter` available from `FastAPI` using import: `from fastapi import APIRouter`.    
@@ -90,12 +90,9 @@ Once the app is running you can use this link to access the swagger documentatio
       
       Response: 
       {
-          "message": "Error getting claim data",
-          "error details": {
-              "status_code": 400,
-              "detail": "start_time must be before end_time",
-              "headers": null
-          }
+           "status_code": 400,
+           "detail": "start_time must be before end_time",
+           "headers": null
       }
 
 
@@ -110,12 +107,9 @@ Once the app is running you can use this link to access the swagger documentatio
    
       Response:
       {
-          "message": "Error getting claim data",
-          "error details": {
-              "status_code": 404,
-              "detail": "customer_id not found",
-              "headers": null
-          }
+        "status_code": 404,
+        "detail": "customer_id not found",
+        "headers": null
       }
 
 
@@ -130,12 +124,9 @@ Once the app is running you can use this link to access the swagger documentatio
 
       Response: 
       {
-          "message": "Error getting claim data",
-          "error details": {
-              "status_code": 400,
-              "detail": "invalid entry for time",
-              "headers": null
-          }
+        "status_code": 400,
+        "detail": "invalid entry for time",
+        "headers": null
       }
 
 The error response body has been modified to return a few more fields. 

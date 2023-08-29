@@ -54,5 +54,4 @@ def get_customer_claims(customer_id: int, start_time: int, end_time: int):
         return claim_data
     except Exception as e:
         logger.error(msg="Error getting claim data", exc_info=True)
-        return {"message": "Error getting claim data",
-                "error details": e}
+        return e
