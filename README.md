@@ -78,64 +78,66 @@ Checkout the code and set up the service ready for development as follows:
 1. Providing start_time greater than end_time will result in the 400 bad request:
 
 
-      # curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=20230704000000&end_time=20230605000000' 
+      curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=20230704000000&end_time=20230605000000' 
       
       Query parameters: 
       customer_id = 1201
       start_time = 20230704000000
       end_time = 20230605000000
+      
+      Response: 
+      {
+          "message": "Error getting claim data",
+          "error details": {
+              "status_code": 400,
+              "detail": "start_time must be before end_time",
+              "headers": null
+          }
+      }
 
-   ```json
-   {
-       "message": "Error getting claim data",
-       "error details": {
-           "status_code": 400,
-           "detail": "start_time must be before end_time",
-           "headers": null
-       }
-   }
-   ``` 
 
 2. Providing invalid customer_id will result in 404 error response: 
 
-
-      # curl --location 'http://localhost:8000/claims?customer_id=1203&start_time=20230604000000&end_time=20230605000000' 
+      
+      curl --location 'http://localhost:8000/claims?customer_id=1203&start_time=20230604000000&end_time=20230605000000' 
       
       Query parameters: 
       customer_id = 1203
       start_time = 20230604000000
       end_time = 20230605000000
+   
+      Response: 
+   
+      {
+          "message": "Error getting claim data",
+          "error details": {
+              "status_code": 404,
+              "detail": "customer_id not found",
+              "headers": null
+          }
+      }
 
-   ```json
-   {
-       "message": "Error getting claim data",
-       "error details": {
-           "status_code": 404,
-           "detail": "customer_id not found",
-           "headers": null
-       }
-   }
-   ``` 
+
+
 3. Providing invalid format of start_time of end_time (YYYYMMDDHHMMSS) will result in a 400 bad request: 
 
 
-      # curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=202306040000&end_time=20230605000000' 
+      curl --location 'http://localhost:8000/claims?customer_id=1201&start_time=202306040000&end_time=20230605000000' 
       
       Query parameters: 
       customer_id = 1201
       start_time  = 202306040000
       end_time    = 20230605000000
 
-   ```json
-   {
-       "message": "Error getting claim data",
-       "error details": {
-           "status_code": 400,
-           "detail": "invalid entry for time",
-           "headers": null
-       }
-   }
-   ``` 
+      Response: 
+      {
+          "message": "Error getting claim data",
+          "error details": {
+              "status_code": 400,
+              "detail": "invalid entry for time",
+              "headers": null
+          }
+      }
 
 
 
