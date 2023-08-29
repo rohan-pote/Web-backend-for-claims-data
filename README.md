@@ -7,9 +7,9 @@ For project requirements please refer: https://github.com/rohan-pote/napo-challe
    1. customer_id
    2. start_time
    3. end_time
-2. The datetime format provided in the project is YYYYMMDDHHMMSS. The datetime in the `dummy_claims_response.json` file was not as per this format. 
+2. The datetime format provided in the project is `YYYYMMDDHHMMSS`. The datetime in the `dummy_claims_response.json` file was not as per this format. 
    1. For eg: 1685761200000 does not provide a valid datetime format equal to `YYYYMMDDHHMMSS`. Hence, the `created_time` in the `json` has been updated to work for this project.
-3. The size of the project is small requiring only one endpoint. Therefore, the `/claims` endpoint is added in the `app.py` script. Ideally for a bigger project the best practice is to add each endpoint in its own python file. This can be done by utilizing the `APIRouter` available from `FastAPI` using import: `from fastapi import APIRouter`.    
+3. The size of the project is small requiring only one endpoint. Therefore, the `/claims` endpoint is added in the `app.py` script. Ideally for a bigger project the best practice is to add each endpoint in its own python file. The operations for each endpoint can be controlled by utilizing the `APIRouter` available from `FastAPI` using import: `from fastapi import APIRouter`.    
 
 ## Local Environment Setup
 
