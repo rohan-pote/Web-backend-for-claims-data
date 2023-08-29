@@ -40,9 +40,7 @@ Checkout the code and set up the service ready for development as follows:
 
 ## Swagger Documentation
 
-      Once the app is running you can use this link to access the swagger documentation: 
-      
-      http://localhost:8000/docs
+Once the app is running you can use this link to access the swagger documentation: http://localhost:8000/docs
 
 ## Calling the customer claims endpoint:
       # When the app is running you can do the following curl request: 
