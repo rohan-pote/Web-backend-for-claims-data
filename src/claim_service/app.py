@@ -10,7 +10,7 @@ app = FastAPI()
 
 """
 Note: For a bigger project, the endpoints would ideally be split in different files, one file for each endpoint.
-This can be done by utilizing the APIRouter available from FastAPI using import: from fastapi import APIRouter   
+The operations for each endpoint can be controlled by utilizing the APIRouter available from FastAPI using import: from fastapi import APIRouter
 """
 
 
