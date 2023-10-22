@@ -34,8 +34,6 @@ Checkout the code and set up the service ready for development as follows:
     # Create a docker container using the built image and run it:  
     docker run --rm -it --name claim-api -p 8000:8000 claim-api-service
 
-![Screenshot 2023-08-29 at 00 47 02](https://github.com/rohan-pote/napo-challenge/assets/34726174/83c042c0-d4c6-4430-ae23-7db8a3bbc261)
-
 ## Swagger Documentation
 
 Once the app is running you can use this link to access the swagger documentation: http://localhost:8000/docs
