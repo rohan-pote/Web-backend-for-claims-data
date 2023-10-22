@@ -1,6 +1,4 @@
-# claim service backend test solution
-
-For project requirements please refer: https://github.com/rohan-pote/napo-challenge/blob/main/README.requirements.md
+# claim service backend
 
 ## Assumptions and approach
 1. The endpoint requires all following parameters for getting the correct response. Error handling is added if any parameter is missing. 
